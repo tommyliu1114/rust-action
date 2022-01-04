@@ -9,7 +9,7 @@ fn main() {
     loop {
         let mut guess = String::new();
         io::stdin().read_line(&mut guess).expect("read line error");
-        println!("your gduess is dd : {} ",guess);
+        println!("your gduess is df : {} ",guess);
         let guess_n :u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {println!("input wrong");continue} 
