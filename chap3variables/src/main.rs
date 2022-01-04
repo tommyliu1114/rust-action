@@ -49,6 +49,8 @@ fn another_fn(x: i32) -> i32{
     }else {
         println!("small value is : {}",x);
     }
-    
+    for number in (1 .. 4).rev(){
+        println!("number is : {} ",number);
+    }
     return x;
 }
