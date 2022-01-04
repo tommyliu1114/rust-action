@@ -9,6 +9,12 @@ fn main() {
     //clone 仅仅针对heap上数据，栈上的数据stack不需要，廉价的创造
     let s3 = s1.clone();
     println!("s1 is {}, s3 is {}",s1,s3);
+    take_ownership(s3);
+    //println!("after take ownership : {}",s3);
     //copy train 和 drop trait互斥；
     //copy-trait的类型：整形，浮点，bool，char，字段都为copy的tuple
+}
+
+fn take_ownership(some_string: String) {
+    println!("take {}",some_string);
 }
