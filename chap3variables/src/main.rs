@@ -18,9 +18,37 @@ fn main() {
     let a: [i32;5] = [1,2,3,45,6];
     let b = [3;5];
     println!("arry is {:?},{:?}",a,b);
+    println!("return {} ",another_fn(55));
+
+    //loop ,while ,for
+    let mut counter = 0;
+    let l_r = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("value is {}",l_r);
+    let mut number = 3;
+    while number > 0 {
+        number = number - 1;
+    }
+    println!("final num is {}",number);
+    //for 
+    let cc = [10,20,30,40,50];
+    //let mut index = 0;
+    for elem in cc.iter() {
+        println!("value is : {}",elem);
+    }
+
+}
+
+fn another_fn(x: i32) -> i32{
+    if x >  5 {
+        println!("bigger value is : {}",x);
+    }else {
+        println!("small value is : {}",x);
+    }
     
-
-    
-
-
+    return x;
 }
