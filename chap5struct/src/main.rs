@@ -21,8 +21,9 @@ fn main() {
     };
     let s2 = recArea(&reec);
     println!("area is {},{},{}",s,s1,s2);
-    
+    println!("{:#?}",reec);
 }
+#[derive(Debug)]
 struct Rectangle {
     width:u32,
     length:u32,
