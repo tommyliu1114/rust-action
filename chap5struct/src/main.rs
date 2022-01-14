@@ -19,9 +19,18 @@ fn main() {
         width: 30,
         length:12,
     };
+    let reec2 = Rectangle {
+        width: 20,
+        length:32,
+    };
+    let reec3 = Rectangle {
+        width: 40,
+        length:12,
+    };    
     let s2 = recArea(&reec);
     println!("area is {},{},{},{}",s,s1,s2,reec.recArea());
     println!("{:#?}",reec);
+    println!("{}",reec.can_hold(&reec2))
 }
 
 // rust 调用方法，自动添加&，&mut ，* ，方便object匹配方法签名
@@ -35,6 +44,16 @@ impl Rectangle {
     fn recArea(&self) -> u32 {
         self.length * self.width
     } 
+    fn can_hold(&self,other: &Rectangle) -> bool {
+        self.width > other.width && self.length > other.length
+    }
+    //关联函数，不把self作为第一个参数的函数，构造器常用
+    fn square(size: u32) -> Rectangle {
+        Rectangle {
+            width: size,
+            length: size,
+        }
+    }
 }
 
 fn recArea(reec: &Rectangle) -> u32 {
