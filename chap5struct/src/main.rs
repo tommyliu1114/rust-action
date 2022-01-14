@@ -23,6 +23,8 @@ fn main() {
     println!("area is {},{},{},{}",s,s1,s2,reec.recArea());
     println!("{:#?}",reec);
 }
+
+// rust 调用方法，自动添加&，&mut ，* ，方便object匹配方法签名
 #[derive(Debug)]
 struct Rectangle {
     width:u32,
