@@ -13,7 +13,23 @@ fn main() {
         ..user1
     };
     //所有权
+    let s = area(32, 20);
+    let s1 = areadim((32,20));
+    let reec = Rectangle {
+        width: 30,
+        length:12,
+    };
+    let s2 = recArea(&reec);
+    println!("area is {},{},{}",s,s1,s2);
     
+}
+struct Rectangle {
+    width:u32,
+    length:u32,
+}
+
+fn recArea(reec: &Rectangle) -> u32 {
+    reec.length * reec.width
 }
 //tuple struct
 struct Color(i32,i32,i32);
@@ -24,4 +40,11 @@ struct User {
     email: String,
     singn_in_count: u64,
     active: bool,
+}
+
+fn area(width: u32,length: u32) -> u32{
+    width * length
+}
+fn areadim(dim:(u32,u32)) -> u32 {
+    dim.0 * dim.1
 }
