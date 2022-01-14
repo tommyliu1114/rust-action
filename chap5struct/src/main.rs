@@ -20,13 +20,19 @@ fn main() {
         length:12,
     };
     let s2 = recArea(&reec);
-    println!("area is {},{},{}",s,s1,s2);
+    println!("area is {},{},{},{}",s,s1,s2,reec.recArea());
     println!("{:#?}",reec);
 }
 #[derive(Debug)]
 struct Rectangle {
     width:u32,
     length:u32,
+}
+
+impl Rectangle {
+    fn recArea(&self) -> u32 {
+        self.length * self.width
+    } 
 }
 
 fn recArea(reec: &Rectangle) -> u32 {
