@@ -14,6 +14,17 @@ struct IpStuc {
 
 }
 
+enum Message {
+    Quit,
+    Move{x:i32,y:i32},
+    Write(String),
+    ChangeColor(i32,i32,i32),
+}
+
+impl Message {
+    fn call(&self){}
+}
+
 fn main() {
     println!("Hello, world!");
     let for4 = IpAddrKind::v4;
@@ -24,7 +35,8 @@ fn main() {
         kind: IpAddrKind::v4,
         address: String::from("127.0.0.1")
     };
-
+    let q = Message::Quit;
+    q.call()
 }
 
 fn route(ip_kind : IpAddrKind) {
