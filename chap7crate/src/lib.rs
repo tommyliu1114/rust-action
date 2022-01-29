@@ -25,6 +25,15 @@ mod back_of_house {
         pub toast: String,
         seasonal_fruit: String ,  
     }
+
+    impl Breakfast {
+        pub fn summmer(toast: &str) -> Breakfast {
+            Breakfast {
+                toast: String::from((toast)),
+                seasonal_fruit: String::from("peach")
+            }
+        }
+    }
     fn fix_incorrect_order(){
         cook_order();
         super::server_order();
