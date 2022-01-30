@@ -19,7 +19,10 @@ fn main() {
     for (k,v ) in &nscores {
         println! ("{}: {}",k,v);
     }
+    let zbrown = String::from("brown");
+    let nen = nscores.entry(&zbrown);
+    nen.or_insert(&50);
     
 
-    
+
 }
