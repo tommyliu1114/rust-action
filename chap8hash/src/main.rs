@@ -15,4 +15,11 @@ fn main() {
         None => println!("team not exists")
 
     }
+
+    for (k,v ) in &nscores {
+        println! ("{}: {}",k,v);
+    }
+    
+
+    
 }
