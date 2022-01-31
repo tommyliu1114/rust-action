@@ -6,7 +6,7 @@ fn main() {
     scores.insert(String::from("nickname is nil"), 100);
     let teams = vec![String::from("blue"),String::from("yellow")];
     let initial_scoers = vec![10,23];
-    let nscores: HashMap<_,_> = 
+    let mut nscores: HashMap<_,_> = 
     teams.iter().zip(initial_scoers.iter()).collect();
     // 所有权
     let blue = String::from("blued");
