@@ -3,3 +3,4 @@ pub trait Summary {
     //fn summarize1(&self) -> String;
 }
 
+
